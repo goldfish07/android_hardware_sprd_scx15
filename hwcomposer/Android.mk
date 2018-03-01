@@ -38,7 +38,7 @@ LOCAL_SHARED_LIBRARIES := \
 	libui \
 	libsync \
 	libmemoryheapion \
-	libHWCUtils \
+	#libHWCUtils \
 
 LOCAL_SRC_FILES := \
 	SprdHWComposer.cpp \
