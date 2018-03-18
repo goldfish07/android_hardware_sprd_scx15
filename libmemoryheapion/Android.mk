@@ -29,9 +29,9 @@ LOCAL_ADDITIONAL_DEPENDENCIES += \
 
 LOCAL_C_INCLUDES += \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
-	$(TOP)/hardware/sprd/kernel_headers/$(TARGET_BOARD_PLATFORM)
-
-ifdef ($(TARGET_BOARD_PLATFORM),sc8810)
+	$(LOCAL_PATH)/libion_sprd/kernel_headers/
+       	
+ifdef ($(TARGET_BOARD_PLATFORM),sc8810) #for sc8810
 LOCAL_CFLAGS += -DSC8810_BOARD
 endif
 
@@ -42,7 +42,8 @@ LOCAL_SHARED_LIBRARIES := \
 	libbinder \
 	liblog \
 	libcutils \
-	libutils
+	libutils \
+	libion_sprd
 
 LOCAL_MODULE_TAGS := optional
 
